@@ -124,14 +124,71 @@ Cada tipo de agente tem suas vantagens e desvantagens, e a escolha do tipo de ag
 
 ## Contribuições
 
+## Discussões
 
-### Discussões
+### IA na F1
 
+As corridas de F1 ocorrem desde 1950 e em todos esses anos passou por muitas evoluções principalmente em seus carros, com novos chassis, motores e equipamentos que visam garantir a segurança dos pilotos. Um esporte onde não apenas a habilidade de quem conduz os carros conta mas também as estratégias tomadas pelas equipes.
+
+Dessa forma, qualquer informação detalhada obtida pela equipe ajuda em decisões mais assertivas na sua estratégia como o momento certo de se realizar a troca dos pneus, qual jogo de pneus utilizar levando em consideração o clima e a posição do piloto levando também em consideração o posicionamento dos demais, a permuta entre pilotos da mesma equipe que estão em posições subsequentes. 
+
+Nesse tipo de esporte a tecnologia está presente em todo de processo, onde ela é usada para monitorar e aprimorar suas competições. A sua incrementação foi um processo natural e acomponhou suas evoluções, como por exemplo o uso da telemetria - utilização de sensores para coletar dados em tempo real, além do uso de gêmeos virtuais que simulam componentes físicos para ammbientes de simulação.
+
+As equipes de F1 constantemente reinventam as estratégias a cada ano, fazendo uso de tecnologias de última geração para se sobressair frente aos rivais, já que cada milisegundo conta no resultado final. A principal novidade para o ano de 2023 foi o uso de IA. Alguns sistemas já estavam sendo usadas para a logística e acerto na parte técnica e mecânica dos carros, mas a equipe da Red Bull em parceria com a Oracle passou a usar em todo sistema de telemetria do carro. Sensores acoplados por toda parte do carro informa com precisão aos mecânicos e enegenheiros o que fazer em milésimos de segundos, auxiliando, também, na montagem da estrategias de corrida. 
+
+A F1 continuará optando pela tomada de decisão dos pilotos nas pistas. Assim, a ideia de ter os carros guiados por máquinas ainda é distante. O uso da IA terá seu papel fundamental dentro dos boxes auxiliando as equipes nas estratégias dentro das pistas.
+
+### IA para recrutamento e seleção de candidatos
+
+O recrutamento é um processo que consome muito tempo exigindo uma análise precisa e rápida sobre uma grande quantidade de informações. Desde a seleção de candidatos até a realização de entrevistas e avaliação de talentos, os recrutadores precisam navegar por uma ampla gama de tarefas para encontrar a opção certa para as necessidades da empresa.
+
+A ascensão da IA ​​significa que muitas dessas tarefas podem agora ser simplificadas, poupando tempo e recursos ao Departamento de Pessoal. Dentre algumas mudanças temos:
+
+1. Busca por candidatos: Soluções de busca ajudam a localizar e conectar recrutadores com talentos rellevantes mais rapidamente. Essas ferramentas usam algoritmos e aprendizado de máquina para automatizar diversas tarefas, incluindo busca em quadros de empregos, bancos de dados internos e plataformas de mídia social, para identificar e encontrar os candidatos mais relevantes para uma função específica. 
+
+2. Avaliação Comportamental: Usado pelas empresas para medir a competência e os traços de personalidade dos candidatos incorporando gamificação, avaliações comportamentais e testes de habilidades. Os dados gerados por essas ferramentas são analisados ​​por algoritmos de IA para fornecer um relatório detalhado sobre os pontos fortes, fracos e traços de personalidade de um candidato.
+
+3. Entrevistas com candidatos:  Embora os processos de entrevistas tradicionais possam exigir muito tempo e esforço por parte do recrutador, as plataformas de entrevistas habilitadas para IA podem reduzir significativamente o esforço humano, simplificando o processo e aproveitando o poder dos dados e análises. Por exemplo, estas plataformas permitem aos recrutadores realizar entrevistas de pré-seleção com candidatos através de videochamadas e interações baseadas em texto. Essas conversas são gravadas e analisadas por meio de algoritmos de aprendizado de máquina para identificar os melhores candidatos para a próxima rodada de entrevistas.
+
+Para que um sistema assim funcione, é importante garantir que nenhum tipo de viés irá predominar para que se tenha uma análise justa e correta. Vale resasltar que devido as limitações atuais da IA, ela não pode substituir completamente um entrevistador humano, necessário para julgar os resultados fornecidos, mas são ferramentas que agilizam o trabalho e permitem o ganho de tempo.
+
+### Uso de IA para composição musical
+
+A composição musical é uma atividade humana onde é necessário criatividade e inspiração para criar a letra, pensar na melodia, criar arranjos e ritmos. Devido tantos detalhes, é necessário tempo até desenvolver a maturação  para desenvolver uma boa música. Assim como outros tipos de obras, o autor coloca para fora seus sentimentos, repensa sobre eles a fim de aprimorar. 
+
+Porém, será se uma IA teria a capacidade de combinar a criação uma letra, mesclando instrumentos musicais, criando a melodia e demais fatores seguindo a tendência ou até mesmo inove, a fim de fazer sucesso? 
+
+Os questionamentos que ficam é de como deveria ser o dataset de treinamento para criar uma IA que visa tal objetivo. As técnicas existentens hoje, conseguiriam representar a capacidade necessária para desenvolver tais competências?
 
 ## Projetos e Problemas
 
+> Problema original: Uso de IA para orientar compra e venda de ações
 
 ### Descrição PEAS:
 
+1. Performance (Medida de Desempenho):
+* Maximizar o ganho com compra e venda de ações na bolsa de valores
+* Reduzir perda com compra de ações
+* Ajuda na criação de uma carteira de investimentos
+2. Environment (Ambiente):
+* Investidores de variados tipos de experiência (inciciante, intermediário, avançado)
+* Investidores de variados perfis (conservador, moderado, arriscado)
+3. Actuators (Atuadores):
+* Informações sobre o mercado financeiro nacional e internacional
+* Realização de previsões assertivas
+* Dicas e informação do mercado financeiro baseadas em fatos 
+4. Sensors (Sensores):
+* Identificação de padrões
+* Algoritmos de Regressão
 
 ### Propriedades do ambiente e relevância do problema:
+
+1. Dinamicidade: O ambiente de investimento na bolsa de valores é altamente dinâmico, pois as variações ocorrem de acordo com o “ânimo” do mercado financeiro – em outras palavras, dos próprios investidores. Mudanças como a troca de governo, perspectivas econômicas do Brasil e exterior, resultados das empresas e governo na bolsa.
+
+2. Complexidade: Investir na bolsa de valores, assim como pratos típicos de um país, é algo cultural e que varia de região para região e que requer conhecimento em assuntos como matemática financeira. Para a maioria dos brasileiros, por não ter essa cultura de investimento que deveria ser fornecida no ensino básico, bolsa de valores se torna algo complexo.
+
+3. Incerteza e riscos: O mercado de investimento é cercado de incertezas e que pode possuir riscos que vão desde mais leves a mais graves ocasionando em uma pequena ou grande perca de dinheiro. Todas essas questões dependem de inpumeros fatores que influenciam direta ou indiretamente na bolsa de valores
+
+4. Escala: Segundo o site oficial da B3, o número de investidores no brasil chega a cerca de 17 milhões levando em consideração aqueles que estão tanto na renda fixa quanto renda variável. 
+
+Para alguêm que nunca investiu na bolsa, o cenário pode ser bastante complexo e desafiador. Mesmo para quem já tem algum tempo de experiência na área não esconde o medo que os riscos apresentam nesse ambiente. A falta de estratégia e a falta de conhecimento e suporte fazem com que muitos não arrisquem entrar para a área de investimento, o que, quando aplicado com bom senso, pode ser um grande aliado na formação de uma renda extra, principal e até uma forma de garantir a asposentadoria futura. Portanto, a existência de uma IA capaza de fornecer as aplicações citadas seria de grande utilizada à população brasileira.
