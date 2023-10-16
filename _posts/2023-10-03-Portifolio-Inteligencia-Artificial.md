@@ -6,51 +6,50 @@ tags: [ai, ai100]
 ---
 
 ## O que é Inteligência Artificial
-A expressão "inteligência artificial" carrega consigo um elemento fundamental que deve ser destacado, e esse elemento está nas suas origens e na maneira como é concebida. Ela surge como resultado do engenho e da inventividade humana, e não está intrinsecamente ligada a influências naturais, sobretudo aquelas de natureza biológica ou evolutiva. Em outras palavras, o que é considerado como sendo "inteligência artificial" difere substancialmente daquilo que é naturalmente inteligente, pois trata-se de artefatos dotados de propriedades especiais que, em sua essência, não pertencem ao que é natural. 
+O termo "inteligência artificial" trata-se de um conceito bastante amplo e que pode não ter apenas um significado. Mas, essencialmente, o termo está relacionado à capacidade de uma máquina reproduzir competências semelhentes aos seres humanos. Para entendermos melhor seu significado, é importante entender o que cada palavra que o compõe quer dizer:
 
-Esses artefatos, caracterizados por uma inteligência artificial, adquirem tal capacidade por meio de um processo específico, ou seja, são criados, projetados ou fabricados com esse propósito. Eles representam, portanto, uma categoria especial de entidades, geralmente classificadas como máquinas. Se considerarmos máquinas como objetos capazes de realizar trabalho, podemos argumentar que os seres humanos, também capazes de realizar tarefas, podem, de certa forma, ser enquadrados nessa definição ampla de máquinas.
+Primeiramente, podemos entender inteligência como a capacidade de extrair informações, tomar decisões e aprender com ela, ou seja, utilizar experiência prévia para julgar e decidir a melhor forma ou maneira que algo deve ser feito. O termo artificial diz respeito àquilo que foi feito pelo homem e "não pertence à natureza". Quando fazemos a união desses termos temos a definição de uma área multidisciplinar que compreende a criação de máquinas capazes de tomar decisões e aprender com elas.
 
-Contudo, é importante salientar que esse tipo de categorização não deve ser interpretada de forma simplista ou redutora. A inteligência artificial, embora seja uma manifestação da criatividade humana, representa um avanço notável na criação de sistemas capazes de executar tarefas complexas, aprender autonomamente e tomar decisões baseadas em dados. Mesmo com o termo "artificial" em seu nome, a inteligência artificial não deve ser subestimada; ela desempenha um papel significativo em diversos setores da sociedade, desde a indústria até a área de saúde e pesquisa científica. Portanto, a inteligência artificial é um testemunho da habilidade humana para criar algo extraordinário, transcendendo os limites do natural em direção ao artificial, mas merecendo todo o reconhecimento por sua importância e potencial impacto no mundo moderno.
+Contudo, é importante reforçar que essa definição pode ir além da citada acima. A inteligência artificial, embora seja uma manifestação da criatividade humana, representa um grande avanço na criação de ferramentas capazes de executar diversos tipos de tarefas complexas, aprender autonomamente e tomar decisões baseadas em dados. Mesmo com o termo "artificial" em seu nome, a inteligência artificial não deve ser menosprezada; ela desempenha um papel significativo em diversos setores da sociedade, desde a área da saúde até industrias e pesquisas científicas. Portanto, a inteligência artificial é uma forma de testar a habilidade humana para criar algo extraordinário, ultrapassando os limites daquilo que é natural em direção ao artificial, mas tendo em vista todo o reconhecimento por sua importância e potencial impacto que tem no mundo.
 
 ## Histórico
 ### Mitologia e Ficção:
-Nesse estágio inicial, a inteligência artificial (IA) era sobretudo um conceito investigado em histórias mitológicas e na literatura de ficção, como narrativas que envolviam autômatos e máquinas com capacidades de pensamento.
-
-A ideia de criar seres artificiais com inteligência remonta a antigas mitologias, como a do golem judaico ou o mito de Pigmalião na mitologia grega, que exploravam a criação de entidades não humanas com vida ou cognição.
+Nesse momento inicial, a inteligência artificial era vista como uma investigação na mitologia e na ficção, presente em narrativas que envolviam autômatos e máquinas com capacidade de pensamento, por exemplo o Golem (da tradição judaica, uma imagem dotada de vida)
 
 ### O início da inteligência artificial (1943-1956):
-Nessa época, a inteligência artificial (IA) começou a evoluir como uma área de estudo formal, com pioneiros notáveis como Alan Turing e John von Neumann desempenhando papéis essenciais no avanço de conceitos fundamentais.
+A inteligência artificial (IA) começou a se desenolver como uma área de estudo formal, com pesquisadores e cientistas notáveis como Alan Turing e John von Neumann. Os pesquisadores Warren McCulloch e Walter Pitts apresentam em 1943 um artigo onde é citado pela primeira vez as redes neurais, estruturas de raciocínio artificiais em forma de modelo matemático que imitam o sistema nervoso do ser humano.
 
-Alan Turing é frequentemente lembrado por seu "Teste de Turing", uma proposta que questiona se uma máquina pode ser considerada inteligente se sua interação com um ser humano for indistinguível da de outro ser humano. Essa ideia ainda é relevante na avaliação da inteligência artificial hoje em dia.
+Um dos momentos mais marcantes desse período é o "Teste de Turing" desenvolvido por Alan Turing, que surgiu na idéia de questionar se uma máquina pode ser considerada inteligente ao ponto de um juiz, dado algumas perguntas, não consegue distinguir se a resposta vem de uma máquina ou de uma pessoa. Essa ideia apresentou conceitos relevantes para o surgimento da inteligência artificial que conhecemos hoje em dia.
 
 ### Entusiasmo inicial, grandes expectativas (1952-1969):
-Nesse período, havia um entusiasmo considerável em relação à inteligência artificial (IA), com expectativas elevadas de que as máquinas em breve poderiam realizar raciocínio e tomar ações de forma semelhante aos seres humanos.
+Nesse período, com as primeiras pesquisas na área, houve uma grande expectativa do que a IA seria capaz de fazer. As expectativas eram tão altas que se pensava que, em breve, as máquinaspoderiam realizar raciocínio e tomar ações de forma semelhante aos seres humanos.
 
-Essa era conhecida como o "Inverno da IA" (AI Winter), um período subsequente de desilusão que ocorreu quando essas expectativas iniciais não foram alcançadas imediatamente, levando a uma desaceleração no financiamento e desenvolvimento da IA por algum tempo.
 
 ### Uma dose de realidade (1966-1973):
+Ficou conhecida como o "Inverno da IA" (AI Winter), um período de grande desilusão que ocorreu devido as expectativas iniciais não terem sido alcançadas imediatamente, levando a uma queda no investimento financeiro e desenvolvimento de pesquisa em IA por um bom tempo.
+
 Neste momento, ficou evidente que muitas das expectativas iniciais da IA eram excessivamente otimistas, levando a um período de desilusão devido ao progresso lento.
 
 ### Sistemas Especialistas (1969-1986):
-Durante esse período, os sistemas especialistas ganharam destaque, sendo programas de computador que tinham a capacidade de simular o conhecimento humano em áreas específicas, e eles se tornaram muito populares.
+Após esse choque de realidade, aproximadamente no ano de 1969 surgiram os primeiros sistemas especialistas que foram ganhando destaque, sendo esses softwares capazes de simular o conhecimento humano em áreas específicas.
 
 Os sistemas especialistas foram amplamente utilizados em campos como medicina, engenharia e finanças para auxiliar na tomada de decisões e resolução de problemas complexos. Eles baseavam suas decisões em regras e informações fornecidas por especialistas humanos.
 
 ### O ressurgimento das redes neurais (1986-presente):
-As redes neurais, modelos de IA inspirados na estrutura cerebral, ressurgiram e se tornaram uma parte crucial do progresso atual em IA.
+As redes neurais, modelos de IA baseados na estrutura cerebral dos seres humanos, ressurgiram e se tornaram uma parte importante no desenvolvimento atual.
 
 ### Raciocínio probabilístico e aprendizado de máquina (1987-presente):
-Nessa fase, métodos como o aprendizado de máquina e o uso do raciocínio probabilístico tornaram-se cruciais para impulsionar o desenvolvimento da inteligência artificial. Essas abordagens permitiram que as máquinas compreendessem e processassem informações de maneira mais avançada.
+A partir de então, foram aplicados conceitos de probabilidade e para aprimoramento das IAs. Essas abordagens permitiram que as máquinas compreendessem e processassem informações de maneira mais avançada e precisa.
 
-O aprendizado de máquina se baseia na capacidade das máquinas de aprender a partir de dados e melhorar seu desempenho ao longo do tempo, enquanto o raciocínio probabilístico envolve a utilização de probabilidades para tomar decisões informadas, o que é fundamental em muitos sistemas de IA modernos, como carros autônomos e assistentes virtuais.
+Como citado na introdução, o aprendizado de máquina se baseia na capacidade das máquinas aprenderem a partir de dados e melhorar seu desempenho ao longo do tempo, enquanto o raciocínio probabilístico envolve a utilização de probabilidades para tomar decisões informadas, o que é fundamental em muitos sistemas de IA modernos, como carros autônomos e assistentes virtuais.
 
 ### O advento do "Big Data" (2001-presente):
-A ascensão do "Big Data" transformou a IA, já que enormes volumes de informações tornaram-se disponíveis para treinar modelos de IA mais precisos e eficazes.
+O conceito e implementação de "Big Data" ajudou no desenvolvimento da IA, já que o grande volume de dados tornaram-se acessíveis para treinar modelos de IA fazendo com que fiquem mais precisos e eficazes.
 
 ### A era do aprendizado profundo (2011–presente):
-O "deep learning," também chamado de aprendizado profundo, surgiu como uma tendência essencial na inteligência artificial (IA). Isso possibilitou o desenvolvimento de redes neurais profundas que podem realizar tarefas altamente complexas, como o reconhecimento de voz e imagens, com uma precisão notável.
+O "deep learning" ou aprendizado profundo, na história da IA, surgiu como uma forma de melhoria das redes neurais convencionais. Ela possibilitou realizar tarefas altamente complexas, como o reconhecimento de voz e imagens, com uma precisão notável devido ao seu grande números de camadas.
 
-As redes neurais profundas são modeladas a partir do funcionamento do cérebro humano, com camadas sucessivas de processamento de dados. Elas têm sido fundamentais em avanços recentes em tecnologias como carros autônomos, tradução automática e assistentes de voz como a Siri e a Alexa.
+As redes neurais têm sido fundamentais em avanços recentes em tecnologias como tradução automática e assistentes de voz como a Siri e a Alexa.
 
 ## Estado da Arte, Benefícios e Riscos
 ### Stanford University’s One Hundred Year Study on AI (AI100)
