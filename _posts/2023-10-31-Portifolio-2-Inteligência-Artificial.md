@@ -345,65 +345,21 @@ Uma das principais vantagens dos AGs é a capacidade de explorar uma grande de s
 Embora os AGs ofereçam muitos benefícios, a eficácia de sua aplicação depende da escolha adequada de parâmetros, representação de soluções e função de adaptação, tornando essencial a compreensão profunda do problema em questão. Portanto, os algoritmos genéticos são uma ferramenta poderosa para a resolução de uma ampla variedade de problemas complexos em ciência, engenharia, economia e muito mais.
 
 ```
-def needleman_wunsch(seq1, seq2, match=1, mismatch=-1, gap=-1):
-    len_seq1 = len(seq1)
-    len_seq2 = len(seq2)
+class GeneticSolution:
+    def __init__(self, population, fit_function):
+        self.population = population
+        self.fit_function = fit_function
 
-    # Inicialização da matriz de pontuação
-    matrix = [[0] * (len_seq2 + 1) for _ in range(len_seq1 + 1)]
-
-    for i in range(len_seq1 + 1):
-        matrix[i][0] = i * gap
-
-    for j in range(len_seq2 + 1):
-        matrix[0][j] = j * gap
-
-    for i in range(1, len_seq1 + 1):
-        for j in range(1, len_seq2 + 1):
-            match_mismatch = matrix[i - 1][j - 1] + (match if seq1[i - 1] == seq2[j - 1] else mismatch)
-            deletion = matrix[i - 1][j] + gap
-            insertion = matrix[i][j - 1] + gap
-            matrix[i][j] = max(match_mismatch, deletion, insertion)
-
-    # Realiza o rastreamento para encontrar o alinhamento
-    aligned_seq1, aligned_seq2 = [], []
-    i, j = len_seq1, len_seq2
-
-    while i > 0 or j > 0:
-        current_score = matrix[i][j]
-        score_diag = matrix[i - 1][j - 1] if i > 0 and j > 0 else float('-inf')
-        score_up = matrix[i - 1][j] if i > 0 else float('-inf')
-        score_left = matrix[i][j - 1] if j > 0 else float('-inf')
-
-        if current_score == score_diag + (match if seq1[i - 1] == seq2[j - 1] else mismatch):
-            aligned_seq1.append(seq1[i - 1])
-            aligned_seq2.append(seq2[j - 1])
-            i -= 1
-            j -= 1
-        elif current_score == score_up + gap:
-            aligned_seq1.append(seq1[i - 1])
-            aligned_seq2.append('-')
-            i -= 1
-        else:
-            aligned_seq1.append('-')
-            aligned_seq2.append(seq2[j - 1])
-            j -= 1
-
-    aligned_seq1.reverse()
-    aligned_seq2.reverse()
-
-    return ''.join(aligned_seq1), ''.join(aligned_seq2)
-
-# Exemplo de uso
-seq1 = "AGTACGCA"
-seq2 = "TATGC"
-alignment1, alignment2 = needleman_wunsch(seq1, seq2)
-print("Alinhamento 1:", alignment1)
-print("Alinhamento 2:", alignment2)
+    def evolve(self):
+        # implementação do algoritmo
 
 ```
+Algoritmos genéticos diferenciam dos algoritmos tradicionais de otimização em quatro aspectos principais:
 
-um alinhamento de sequências é uma forma de organizar estruturas primárias de DNA, RNA ou proteína para identificar regiões similares que possam ser de relações funcionais, estruturais ou evolucionárias entre elas. Sequências alinhadas de nucleotídeos ou resíduos de aminoácidos são representadas tipicamente como linhas de uma matriz. Espaçamentos (gaps) podem ser inseridos entre os resíduos para que caracteres semelhantes (por algum critério) sejam alinhados em colunas sucessivas.
+* Ao invés de apoiar nos parâmetros da otimização em si e não em codificação do conjunto das possíveis soluções.
+* A forma que os resultados são apresentados é seguindo uma população de soluções e não como uma solução única.
+* Não precisam de nenhum conhecimento derivado do problema, apenas uma forma de avaliação do resultado.
+* Usam transições probabilísticas e não regras determinísticas.
 
 ## Discussões
 
