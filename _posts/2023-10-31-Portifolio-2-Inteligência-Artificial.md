@@ -12,16 +12,14 @@ Para exemplificar, usarei  o problema do quebra-cabeça de 8 peças. Nesse jogo 
 
 ```
 import copy
-
-import copy
 from collections import deque
 
-class EightPuzzle:
+class Eight_Puzzle:
     def __init__(self, state):
         self.state = state
-        self.goal_state = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
+        self.final_state = [[1, 2, 3], [4, 5, 6], [7, 8, 0]]
 
-    def display(self):
+    def print_solution(self):
         for row in self.state:
             print(row)
         print()
@@ -32,8 +30,8 @@ class EightPuzzle:
                 if tile == 0:
                     return i, j
 
-    def is_goal(self):
-        return self.state == self.goal_state
+    def is_finished(self):
+        return self.state == self.final_state
 
     def actions(self):
         i, j = self.find_blank()
@@ -68,37 +66,37 @@ class EightPuzzle:
 def solve_puzzle(initial_state):
     start_node = EightPuzzle(initial_state)
 
-    if start_node.is_goal():
+    if start_node.is_finished():
         return [initial_state]
 
-    open_list = deque([start_node])
+    node_list = deque([start_node])
     closed_set = set()
 
-    while open_list:
-        current_node = open_list.popleft()
-        closed_set.add(tuple(map(tuple, current_node.state)))
+    while node_list:
+        actual_node = node_list.popleft()
+        closed_set.add(tuple(map(tuple, actual_node.state)))
 
-        for action in current_node.actions():
-            child_node = current_node.result(action)
+        for action in actual_node.actions():
+            child_node = actual_node.result(action)
             child_state_tuple = tuple(map(tuple, child_node.state))
 
             if child_state_tuple not in closed_set:
-                open_list.append(child_node)
+                node_list.append(child_node)
 
-                if child_node.is_goal():
+                if child_node.is_finished():
                     path = [child_node.state]
-                    while current_node.state != initial_state:
-                        path.insert(0, current_node.state)
-                        current_node = current_node.parent
+                    while actual_node.state != initial_state:
+                        path.insert(0, actual_node.state)
+                        actual_node = actual_node.parent
                     path.insert(0, initial_state)
                     return path
 
 # Exemplo de uso:
-initial_state = [[1, 2, 3], [4, 0, 5], [7, 8, 6]]
+initial_state = [[1, 3, 2], [4, 0, 5], [8, 7, 6]]
 solution_path = solve_puzzle(initial_state)
 
 for state in solution_path:
-    EightPuzzle(state).display()
+    EightPuzzle(state).print_solution()
 
 ```
 1. Primeiramente serão importadas as bibliotecas que irei utilizar: **copy** será usadaa para criar cópias dos estados do quebra-cabeça e **deque** da biblioteca collections para importar uma fila (FIFO) já pronta.
@@ -107,13 +105,13 @@ for state in solution_path:
 
     * __init__(self, state): Construtor da classe, será quem irá inicializar o objeto com o estado inicial.
 
-    * display(self): Irá exibir o estado atual do quebra-cabeça.
+    * print_solution(self): Irá exibir o estado atual do quebra-cabeça.
 
     * find_blank(self): Usado para encontrar onde está o espaço em branco (representado por 0).
 
     * actions(self): Retorna uma lista de possíveis ações a serem tomadas a partir do estado atual (podendo mover para cima, baixo, esquerda ou direita).
 
-    * is_goal(self): Verifica se o estado atual é o estado desejado (o quebra cabeça já está resolvido).
+    * is_finished(self): Verifica se o estado atual é o estado desejado (o quebra cabeça já está resolvido).
 
     * result(self, action): Retorna o novo objeto EightPuzzle após uma ação ser tomada.
 
@@ -123,13 +121,13 @@ for state in solution_path:
 
     * É verificamos se o nó inicial já é o estado que reolve o quebra-cabeça. Se for, retornamos uma lista contendo apenas o estado inicial, indicando que o quebra-cabeça já foi resolvido.
 
-    * Uma deque (fila) é incializada chamada **open_list** com o nó inicial
+    * Uma deque (fila) é incializada chamada **node_list** com o nó inicial
 
     * Inicializo um conjunto chamado **closed_set** para manter o controle dos estados que já foram explorados.
 
-    * Inicio um loop while que irá executar até que fila **open_list** esteja vazia, representando que não há mais estados para explorar.
+    * Inicio um loop while que irá executar até que fila **node_list** esteja vazia, representando que não há mais estados para explorar.
 
-    * Removo o primeiro nó da fila **open_list**, que é o nó atual que está sendo explorado.
+    * Removo o primeiro nó da fila **node_list**, que é o nó atual que está sendo explorado.
 
     * Adiciono o estado do nó atual explorado no **closed_set**.
 
@@ -139,7 +137,7 @@ for state in solution_path:
 
     * Crio uma tupla **child_state_tuple** para representar o estado do nó filho. A tupĺa será usada usado para verificar se o estado do nó filho já está no conjunto **closed_set**.
 
-    * Verifico se o estado do nó filho não está no **closed_set**. Se não estiver, o adiciono à **open_list** para explorá-lo posteriormente.
+    * Verifico se o estado do nó filho não está no **closed_set**. Se não estiver, o adiciono à **node_list** para explorá-lo posteriormente.
     
     * Verifico se o nó filho é o estado final. Se for, a solução foi encontrada.
 
@@ -151,7 +149,7 @@ for state in solution_path:
 
 
 ## Problemas de malha aberta e de malha fechada
-* Malha aberta: Esses tipos de problemas são caracterizados por situações em que a solução não dependem de ações do agente de soluções de problemas em relação ao ambiente. Isso significa que independentemente das suas escolhas ou ações, a solução continuará a mesma. Um exemplo clássico desse tipo de problema é o desafio do caixeiro-viajante. Nesse problema clássico o objetivo é determinar o caminho mais curto para visitar um conjunto de cidades e por fim, retornar a cidade de origem. Para solucionar o desafio é necessário desenvolver uma solução ótima que minimize a distância total percorrida, levando em consideração todas as cidades. No entanto, devido à quantidade de combinações possíveis, encontrar a solução mais eficiente pode ser computacionalmente complicado, já que os recursos são limitados, sendo que várias abordagens, como algoritmos de otimização, são empregadas para resolver. Esse tipo de problema tem aplicações em logística, planejamento de rotas, distribuição de recursos e otimização de trajetos em diversas áreas, tornando-o um desafio fundamental em ciência da computação e pesquisa operacional.
+* **Malha aberta:** Esses tipos de problemas são caracterizados por situações em que a solução não dependem de ações do agente de soluções de problemas em relação ao ambiente. Isso significa que independentemente das suas escolhas ou ações, a solução continuará a mesma. Um exemplo clássico desse tipo de problema é o desafio do caixeiro-viajante. Nesse problema clássico o objetivo é determinar o caminho mais curto para visitar um conjunto de cidades e por fim, retornar a cidade de origem. Para solucionar o desafio é necessário desenvolver uma solução ótima que minimize a distância total percorrida, levando em consideração todas as cidades. No entanto, devido à quantidade de combinações possíveis, encontrar a solução mais eficiente pode ser computacionalmente complicado, já que os recursos são limitados, sendo que várias abordagens, como algoritmos de otimização, são empregadas para resolver. Esse tipo de problema tem aplicações em logística, planejamento de rotas, distribuição de recursos e otimização de trajetos em diversas áreas, tornando-o um desafio fundamental em ciência da computação e pesquisa operacional.
 
 ```
 import itertools
@@ -159,25 +157,25 @@ import itertools
 def distance(a, b):
     return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
 
-def total_distance(route, cities):
-    return sum(distance(cities[i], cities[i + 1]) for i in range(len(route) - 1))
+def total_distance(path, cities):
+    return sum(distance(cities[i], cities[i + 1]) for i in range(len(path) - 1))
 
 cities = [(1, 2), (2, 4), (4, 4), (4, 1)]
 
-shortest_distance = float('inf')
-shortest_route = None
+smallest_distance = float('inf')
+smallest_path = None
 
-for route in itertools.permutations(cities):
-    route_distance = total_distance(route, cities)
-    if route_distance < shortest_distance:
-        shortest_distance = route_distance
-        shortest_route = route
+for path in itertools.permutations(cities):
+    path_distance = total_distance(path, cities)
+    if path_distance < smallest_distance:
+        smallest_distance = path_distance
+        smallest_path = path
 
-print(shortest_route)
+print(smallest_path)
 ```
 Neste exemplo em Python, o código resolve o problema do caixeiro-viajante encontrando a rota mais curta para um conjunto de cidades usando apenas algumas linhas de código.
 
-* Malha fechada: A solução dos problemas de malha fechada, diferente dos problemas de malha aberta, dependem das ações do agente e das condições do ambiente, tendo como resultado uma interação contínua e feedback periódico entre esses elementos. Nos problemas desse tipo, as decisões tomadas pelo agente não se baseiam apenas em informações imediatas, mas também em considerações de longo prazo, uma vez que as ações podem influenciar o resultado final. Um exemplo clássico desse tipo de problema é o jogo da velha. A solução final do jogo depende não apenas das ações individuais de cada jogador, mas também das estratégias e movimentos do adversário. O jogo da velha ilustra como a tomada de decisões está diretamente ligada ao comportamento do oponente, tornando-o um desafio que vai além de simples cálculos ou regras predefinidas. Essa característica de interdependência torna os problemas de malha fechada uma área de estudo fundamental em ciência da computação, teoria dos jogos e inteligência artificial.
+* **Malha fechada:** A solução dos problemas de malha fechada, diferente dos problemas de malha aberta, dependem das ações do agente e das condições do ambiente, tendo como resultado uma interação contínua e feedback periódico entre esses elementos. Nos problemas desse tipo, as decisões tomadas pelo agente não se baseiam apenas em informações imediatas, mas também em considerações de longo prazo, uma vez que as ações podem influenciar o resultado final. Um exemplo clássico desse tipo de problema é o jogo da velha. A solução final do jogo depende não apenas das ações individuais de cada jogador, mas também das estratégias e movimentos do adversário. O jogo da velha ilustra como a tomada de decisões está diretamente ligada ao comportamento do oponente, tornando-o um desafio que vai além de simples cálculos ou regras predefinidas. Essa característica de interdependência torna os problemas de malha fechada uma área de estudo fundamental em ciência da computação, teoria dos jogos e inteligência artificial.
 
 ```
 def check_winner(board):
@@ -194,14 +192,14 @@ def check_winner(board):
 
     return None
 
-def game_result(board):
+def result(board):
     winner = check_winner(board)
     if winner is not None:
         return winner
-    return "Draw" if all(cell != 0 for row in board for cell in row) else None
+    return "Velha" if all(cell != 0 for row in board for cell in row) else None
 
 board = [[1, 2, 0], [2, 1, 0], [2, 1, 1]]
-print(game_result(board))
+print(result(board))
 
 ```
 
@@ -218,14 +216,14 @@ O UCS explora os nós com menor custo acumulado primeiro. Ele é útil para enco
 ```
 import heapq
 
-def uniform_cost_search(problem):
-    frontier = [(0, problem.initial_state())]
+def ucs(problem):
+    border = [(0, problem.initial_state())]
     explored = set()
 
-    while frontier:
-        cost, node = heapq.heappop(frontier)
+    while border:
+        cost, node = heapq.heappop(border)
 
-        if problem.is_goal(node):
+        if problem.is_finished(node):
             return node
 
         explored.add(node)
@@ -235,17 +233,17 @@ def uniform_cost_search(problem):
 
             if child not in explored:
                 # Verifique se o nó não está na fila com um custo menor
-                child_in_frontier = False
-                for i, (old_cost, old_node) in enumerate(frontier):
+                child_in_border = False
+                for i, (old_cost, old_node) in enumerate(border):
                     if old_node == child:
                         if old_cost > new_cost:
-                            frontier[i] = (new_cost, child)
-                            heapq.heapify(frontier)
-                        child_in_frontier = True
+                            border[i] = (new_cost, child)
+                            heapq.heapify(border)
+                        child_in_border = True
                         break
 
-                if not child_in_frontier:
-                    heapq.heappush(frontier, (new_cost, child))
+                if not child_in_border:
+                    heapq.heappush(border, (new_cost, child))
 
     return None
 
@@ -266,13 +264,13 @@ def a_star_search(problem, heuristic_function):
     def f_cost(g_cost, state):
         return g_cost + heuristic_function(state)
 
-    frontier = [(f_cost(0, problem.initial_state()), 0, problem.initial_state())]
+    border = [(f_cost(0, problem.initial_state()), 0, problem.initial_state())]
     explored = set()
     
-    while frontier:
-        _, g_cost, node = heapq.heappop(frontier)
+    while border:
+        _, g_cost, node = heapq.heappop(border)
         
-        if problem.is_goal(node):
+        if problem.is_finished(node):
             return node
         
         explored.add(node)
@@ -281,17 +279,17 @@ def a_star_search(problem, heuristic_function):
             new_g_cost = g_cost + action_cost
 
             # Verifica se o nó não está na fila com um custo menor
-            child_in_frontier = False
-            for i, (old_f_cost, old_g_cost, old_node) in enumerate(frontier):
+            child_in_border = False
+            for i, (old_f_cost, old_g_cost, old_node) in enumerate(border):
                 if old_node == child:
                     if new_g_cost < old_g_cost:
-                        frontier[i] = (f_cost(new_g_cost, child), new_g_cost, child)
-                        heapq.heapify(frontier)
-                    child_in_frontier = True
+                        border[i] = (f_cost(new_g_cost, child), new_g_cost, child)
+                        heapq.heapify(border)
+                    child_in_border = True
                     break
 
-            if not child_in_frontier and child not in explored:
-                heapq.heappush(frontier, (f_cost(new_g_cost, child), new_g_cost, child))
+            if not child_in_border and child not in explored:
+                heapq.heappush(border, (f_cost(new_g_cost, child), new_g_cost, child))
 
     return None
 
