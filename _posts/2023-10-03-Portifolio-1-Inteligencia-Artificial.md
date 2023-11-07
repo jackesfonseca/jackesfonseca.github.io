@@ -1,5 +1,5 @@
 ---
-title: Portifolio 1 - Inteligência Artificial
+title: Portifolio 1 - IA
 date: 2023-10-03 19:27:00 -0400
 categories: [portfolio - inteligencia artificial, portifolio 1]
 tags: [ai, ai100]

@@ -1,5 +1,5 @@
 ---
-title: Portifolio 2 - Inteligência Artificial
+title: Portifolio 2 - IA
 date: 2023-10-31 19:27:00 -0400
 categories: [portfolio - inteligencia artificial, portifolio 1]
 tags: [ai, portfolios, algoritmos de busca]
