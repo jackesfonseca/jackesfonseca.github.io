@@ -1,7 +1,7 @@
 ---
 title: Portifolio 3 - IA
 date: 2023-11-06 16:56:00 -0400
-categories: [portfolio - inteligencia artificial, portifolio 2]
+categories: [portfolio - inteligencia artificial, portifolio 3]
 tags: [ai, portfolios, algoritmos de busca]
 ---
 
